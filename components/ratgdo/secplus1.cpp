@@ -257,7 +257,7 @@ namespace ratgdo {
                     }
                 }
 
-                if (millis() - this->last_rx_ > 100) {
+                if (millis() - this->last_rx_ > 1000) {
                     // if we have a partial packet and it's been over 100ms since last byte was read,
                     // the rest is not coming (a full packet should be received in ~20ms),
                     // discard it so we can read the following packet correctly
